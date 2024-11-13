@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+
+
 
 /* General Reset */
 * {
@@ -7,123 +10,61 @@
     box-sizing: border-box;
 }
 
-/* Thinner margins for all text elements (only paragraphs) */
-p {
-    margin-left: 200px; /* Set left margin */
-    margin-right: 200px; /* Set right margin */
-    position: relative; /* Needed for absolute positioning of pseudo-elements */
-}
-
-/* Set margins for headings */
-h1, h2, h3, h4, h5, h6 {
-    margin-top: 10px; /* Set top margin */
-    margin-bottom: 10px; /* Set bottom margin */
-    margin-left: 100px; /* Set left margin */
-    margin-right: 100px; /* Set right margin */
-}
-
 /* General Body Styles */
 body {
-    font-family: 'Garamond', 'Georgia', serif; /* Existing font family */
-    font-size: large; /* Keep the font size */
-    color: #000000; /* Black text */
+    font-family: 'Poppins', sans-serif;
+    font-size: large;
+    color: #000;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensures footer is at the bottom */
-    background: #f9f9f9; /* Light gray background for better contrast */
+    min-height: 100vh;
+    background: #f9f9f9;
+    overflow-x: auto; /* Allow horizontal scrolling if content exceeds width */
+}
+html {
+    scroll-behavior: smooth;
 }
 
-/* Paragraph Styles */
-main p {
-    margin: 0 200px 20px; /* Center paragraphs with left and right margin */
-    max-width: 800px; /* Limit width for readability */
-    padding: 15px; /* Internal padding for better spacing */
-    background-color: transparent; /* White background for paragraphs */
-    border-left: 5px solid #0F1756; /* Left border for an accent */
-    border-radius: 8px; /* Rounded corners for a softer look */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    line-height: 1.6; /* Improved line spacing for readability */
-    transition: transform 0.3s; /* Smooth transition for hover effect */
-}
-
-/* Hover Effect for Paragraphs */
-main p:hover {
-    transform: scale(1.02); /* Slight zoom effect on hover */
-}
-
-/* Pulse animation */
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        opacity: 0.5; /* Start semi-transparent */
-    }
-    50% {
-        transform: scale(1.05); /* Scale up slightly */
-        opacity: 1; /* Fully visible */
-    }
-    100% {
-        transform: scale(1);
-        opacity: 0.5; /* Return to semi-transparent */
-    }
-}
-
-/* Pulsing outline effect for paragraphs */
-main p::after { /* Change here to scope the effect to paragraphs in main */
-    content: ""; /* Pseudo-element for outline */
-    position: absolute; /* Position absolutely within the p element */
-    top: 0; /* Start at the top */
-    left: 0; /* Start at the left */
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    border: 2px solid lightskyblue; /* Outline color */
-    opacity: 0; /* Initially invisible */
-    transition: opacity 0.3s ease; /* Smooth transition for opacity */
-    border-radius: 8px; /* Rounded corners to match paragraph corners */
-    z-index: -1; /* Make sure it appears behind text */
-}
-
-/* Hover effect for paragraphs */
-main p:hover::after { /* Change here to ensure this applies only to paragraphs in main */
-    opacity: 1; /* Make the outline visible */
-    animation: pulse 1.5s infinite; /* Apply the pulsing animation */
-}
-
-/* Additional Styling for Blockquotes */
-blockquote {
-    font-style: italic; /* Italicized text for quotes */
-    padding: 10px 20px; /* Padding for quotes */
-    border-left: 4px solid #d4af37; /* Accent border for quotes */
-    background-color: #f2f2f2; /* Light gray background for quotes */
-    margin: 20px 0; /* Margin above and below */
-    border-radius: 8px; /* Rounded corners for quotes */
-}
-
-/* Add a Text Shadow for Depth */
-p {
-    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
-}
-
-/* Header and Navigation */
+/* Header Styles */
 header {
-    background-color: white; /* white */
-    color: white;
+    background-color: white;
+    color: #0F1756;
     padding: 10px;
     text-align: center;
-    position: static; /* Keeps the header at the top when scrolling */
-    top: 0; /* Position it at the top */
-    z-index: 1000; /* Ensure it appears above other elements */
+    position: static;
+    z-index: 1000;
+    overflow: hidden; /* Hide anything exceeding header height */
 }
-
 header h1 {
     font-size: 1.5rem;
-    margin-bottom: 10px; /* Added margin for spacing */
+    margin-bottom: 10px;
+}
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px;
 }
 
-.logo {
-    position: absolute; /* Position logo in the top left */
-    top: 20px; /* Adjust as needed */
-    left: 20px; /* Adjust as needed */
-    width: 100px; /* Adjust size as needed */
+/* Ensure logo maintains high quality and scales appropriately */
+.header-logo {
+    width: 100%; /* Make sure the logo can scale down if needed */
+    max-width: 150px; /* Set a max-width to prevent it from getting too big */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 10px; /* Optional: Adjust position */
+}
+
+/* Adjust logo size on mobile devices */
+@media (max-width: 768px) {
+    .header-logo {
+        max-width: 120px; /* Smaller max width for tablets and smaller devices */
+    }
+}
+
+@media (max-width: 480px) {
+    .header-logo {
+        max-width: 100px; /* Even smaller max width for small devices */
+    }
 }
 
 /* Nav Bar Styles */
@@ -133,155 +74,132 @@ header h1 {
     list-style-type: none;
     padding: 10px 0;
     margin: 0;
+    overflow-x: auto; /* Allow horizontal scrolling if the navbar is too wide */
 }
-
 .nav-bar li {
-    margin: 0 20px; /* Increased margin for spacing */
-    position: relative; /* Position relative for the pseudo-element */
+    margin: 0 20px;
+    position: relative;
 }
-
 .nav-bar a {
     color: #0F1756;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1rem;
-    padding: 5px 0; /* Add padding for better spacing */
+    padding: 5px 0;
 }
-
 .nav-bar a:hover {
-    color: lightskyblue; /* Change text color on hover */
+    color: lightskyblue;
 }
-
 .nav-bar a::after {
-    content: ""; /* Pseudo-element for the underline */
-    position: absolute; /* Position absolutely within the li */
-    width: 100%; /* Full width of the text */
-    height: 2px; /* Height of the underline */
-    background: lightskyblue; /* Color of the underline */
-    left: 0; /* Start from the left */
-    bottom: 0; /* Position at the bottom */
-    transform: scaleX(0); /* Initially scale to zero */
-    transition: transform 0.3s ease; /* Smooth transition for the scale */
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: lightskyblue;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
 }
-
 .nav-bar a:hover::after {
-    transform: scaleX(1); /* Scale to full width on hover */
+    transform: scaleX(1);
 }
 
 /* Video Background Section */
 .video-background {
     position: relative;
     overflow: hidden;
-    height: 100vh; /* Full height of the viewport */
+    height: 100vh;
+    max-width: 100%;
 }
-
 .video-background video {
-    position: absolute; /* Position the video absolutely */
-    top: 50%; /* Center it vertically */
-    left: 50%; /* Center it horizontally */
-    min-width: 100%; /* Cover the full width */
-    min-height: 100%; /* Cover the full height */
-    width: auto; /* Maintain aspect ratio */
-    height: auto; /* Maintain aspect ratio */
-    z-index: -1; /* Position it behind other content */
-    transform: translate(-50%, -50%); /* Center the video */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
 }
-
-/* Overlay for the video title */
 .overlay {
-    position: absolute; /* Position overlay */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Center the overlay */
-    color: white; /* Text color */
-    text-align: center; /* Center text */
-}
-
-.video-title {
-    font-size: 3rem; /* Adjust size as needed */
-}
-
-/* Regular Background Section */
-.about-section {
-    background-color: #f0f0f0; /* Change to your desired background color */
-    padding: 40px 20px; /* Add padding */
-    color: #000; /* Text color */
-    text-align: center; /* Center text */
-}
-
-/* Footer Styles */
-footer {
-    background-color: #0F1756; /* Navy blue */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: white;
     text-align: center;
-    padding: 10px 0;
-    margin-top: auto; /* Push footer to bottom */
+}
+.video-title {
+    font-size: 3rem;
 }
 
-
-
-/* Animation keyframes */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+/* Paragraph Styles */
+main p {
+    margin: 0 200px 20px;
+    max-width: 800px;
+    padding: 15px;
+    background-color: transparent;
+    border-left: 5px solid #0F1756;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    position: relative;
+}
+main p:hover {
+    transform: scale(1.02);
+}
+main p::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid lightskyblue;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 8px;
+    z-index: -1;
+}
+main p:hover::after {
+    opacity: 1;
+    animation: pulse 1.5s infinite;
 }
 
-/* Text animation for scrolling */
-h1, h2, h3, p {
-    animation: fadeIn 1s ease forwards; /* Apply fade-in animation */
-    opacity: 0; /* Start with invisible text */
+/* Thinner margins for headings */
+h1, h2, h3, h4, h5, h6 {
+    margin: 10px 100px;
+    animation: fadeIn 1s ease forwards;
+    opacity: 0;
 }
+h1 { animation-delay: 0.2s; }
+h2 { animation-delay: 0.4s; }
+p { animation-delay: 0.6s; }
 
-h1 {
-    animation-delay: 0.2s; /* Delay for h1 */
+/* Blockquote Styles */
+blockquote {
+    font-style: italic;
+    padding: 10px 20px;
+    border-left: 4px solid #d4af37;
+    background-color: #f2f2f2;
+    margin: 20px 0;
+    border-radius: 8px;
 }
-
-h2 {
-    animation-delay: 0.4s; /* Delay for h2 */
-}
-
-p {
-    animation-delay: 0.6s; /* Delay for paragraphs */
-}
-
-
-/* Ensure logo maintains high quality and scales appropriately */
-.header-logo {
-    width: 150px; /* Set an appropriate width */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 100%; /* Responsive scaling */
-}
-.image-background {
-    background-image: url('images/cornell1.jpg'); /* Path to your image */
-    background-size: cover; /* Cover the entire section */
-    background-position: center; /* Center the image */
-    height: 400px; /* Set a height for the section */
-    display: flex; /* Use flexbox to center content */
-    flex-direction: column; /* Stack content vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    color: white; /* Text color for better contrast */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Optional: add shadow for text readability */
-    font-size: xx-large;
-}
-
 
 /* Executive Board Section */
 #eboard {
     padding: 20px;
+    overflow-x: auto; /* Allow scrolling horizontally if content overflows */
 }
-
 .eboard-members {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
 }
-
-/* Member Styles */
 .member {
     background-color: #fff;
     border: 1px solid #ddd;
@@ -291,21 +209,38 @@ p {
     cursor: pointer;
     transition: transform 0.2s;
 }
-
 .member:hover {
     transform: scale(1.05);
 }
 
+/* Image Background Section */
+.image-background {
+    background-image: url('images/cornell1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    font-size: xx-large;
+    overflow: hidden;
+}
+
 /* Footer Styles */
 footer {
-    background-color: #0f1756;
+    background-color: #0F1756;
+    color: white;
     text-align: center;
     padding: 10px 0;
+    margin-top: auto;
 }
 
 /* Popup Styles */
 .popup {
-    display: none; /* Initially hidden */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -314,16 +249,14 @@ footer {
     background-color: rgba(0, 0, 0, 0.8);
     align-items: center;
     justify-content: center;
-    z-index: 1000; /* Ensure it appears above other content */
-    opacity: 0; /* Start with full transparency */
-    transition: opacity 0.3s ease; /* Smooth fade */
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
-
 .popup.show {
-    display: flex; /* Show popup */
-    opacity: 1; /* Fully opaque when displayed */
+    display: flex;
+    opacity: 1;
 }
-
 .popup-content {
     background-color: #fff;
     padding: 20px;
@@ -331,7 +264,6 @@ footer {
     text-align: center;
     position: relative;
 }
-
 .close-btn {
     position: absolute;
     top: 10px;
@@ -339,57 +271,70 @@ footer {
     cursor: pointer;
 }
 
-
-/* Optional: Add a fade-in effect */
-.popup {
-    opacity: 0; /* Start with full transparency */
-    transition: opacity 0.3s ease; /* Smooth fade */
+/* Animations */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.05); opacity: 1; }
 }
-
-.popup[style*="display: flex"] {
-    opacity: 1; /* Set to full opacity when displayed */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .eboard-members {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    main p {
+        margin: 0 50px; /* Reduce the margin for smaller screens */
+    }
+
+    .nav-bar {
+        flex-direction: column; /* Stack nav items vertically on small screens */
+        padding: 20px 0;
+    }
+
+    .nav-bar li {
+        margin: 10px 0; /* Increase space between items */
     }
 }
 
 @media (max-width: 480px) {
     .eboard-members {
-        grid-template-columns: 1fr; /* Single column for small screens */
+        grid-template-columns: 1fr;
+    }
+
+    main p {
+        margin: 0 20px; /* Even less margin on very small screens */
     }
 }
-/* Styles for mobile devices */
-body {
-    font-size: 16px;
-}
 
-/* Styles for tablets and larger screens */
 @media (min-width: 768px) {
-    body {
-        font-size: 18px;
-    }
+    body { font-size: 18px; }
 }
 
-/* Styles for desktops */
 @media (min-width: 1024px) {
-    body {
-        font-size: 20px;
-    }
+    body { font-size: 20px; }
 }
+
+/* Responsive Container Layout */
 .container {
     display: flex;
     flex-wrap: wrap;
+    overflow-x: auto; /* Enable horizontal scroll for containers */
 }
 .item {
-    flex: 1 1 100%; /* Flex item takes full width on small screens */
+    flex: 1 1 100%;
 }
 @media (min-width: 768px) {
     .item {
-        flex: 1 1 50%; /* Flex item takes half width on medium screens */
+        flex: 1 1 50%;
     }
 }
-
+@media (min-width: 1024px) {
+    .item {
+        flex: 1 1 33.33%;
+    }
+}
