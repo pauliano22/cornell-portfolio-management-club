@@ -362,4 +362,34 @@ footer {
         grid-template-columns: 1fr; /* Single column for small screens */
     }
 }
+/* Styles for mobile devices */
+body {
+    font-size: 16px;
+}
+
+/* Styles for tablets and larger screens */
+@media (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+/* Styles for desktops */
+@media (min-width: 1024px) {
+    body {
+        font-size: 20px;
+    }
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.item {
+    flex: 1 1 100%; /* Flex item takes full width on small screens */
+}
+@media (min-width: 768px) {
+    .item {
+        flex: 1 1 50%; /* Flex item takes half width on medium screens */
+    }
+}
 
