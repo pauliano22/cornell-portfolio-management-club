@@ -6,12 +6,16 @@
     <title>Cornell Portfolio Management Club - Home</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="images/logo1.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="particle-script.js" defer></script>
 </head>
 <body>
-    <header>
+    <!-- Header container with background particle system -->
+    <header class="header-container">
         <!-- Add the logo image -->
-        <img src="images/logo2.png" alt="Cornell Portfolio Management Club Logo" class="header-logo">
-    
+        <a href="https://www.cornellportfoliomanagement.com/index.html">
+            <img src="images/logo2.png" alt="Cornell Portfolio Management Club Logo" class="header-logo">
+        </a>
         <nav>
             <ul class="nav-bar">
                 <li><a href="index.html">Home</a></li>
@@ -30,7 +34,7 @@
         </video>
 
         <div class="overlay">
-            <span style="font-size: 70px;" class="video-title"><nobr>Cornell Portfolio Management</nobr></span>
+            <span style="font-size: 70px;" class="video-title">Cornell Portfolio Management</span>
         </div>
     </div>
 
@@ -45,20 +49,35 @@
             </p>
             <h3>Our Mission</h3>
             <p>
-            Our mission is to empower students through hands-on experience, workshops, and networking opportunities with industry 
-            professionals. We believe in fostering a collaborative environment where students can
-            learn, share ideas, and build lasting relationships that will aid them in their careers.
-            Join us to enhance your financial acumen and gain valuable skills that will set you apart
-            in the competitive world of finance.
+            The Cornell Portfolio Management Club's mission is to empower students with practical investment
+            knowledge and hands-on portfolio management experience. Through our extensive new member education
+            program, we strive to bridge the gap between academic theory and professional practice, preparing
+            our members for successful careers in finance and investment management.
              </p>
         <main>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Cornell Portfolio Management Club</p>
-        <br>
-       <p> This organization is a registered student organization of Cornell University</p>
+
+    <footer class="footer-particles">
+        <div id="footer-particles">
+            <canvas id="particle-canvas"></canvas>
+        </div>
+        <div class="footer-content">
+            <p>&copy; 2024 Cornell Portfolio Management Club</p>
+            <p>This organization is a registered student organization of Cornell University</p>
+    
+            <!-- Social Media Links -->
+            <div class="social-icons">
+                <a href="https://www.instagram.com/cornellportfoliomanagementclub/" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/cornell-portfolio-management-club/" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
     </footer>
+    
     
     <script src="script.js"></script>
 </body>
