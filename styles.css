@@ -126,7 +126,7 @@ header h1 {
     text-align: center;
 }
 .video-title {
-    font-size: 3rem;
+    font-size: 5rem;
 }
 
 /* Paragraph Styles */
@@ -725,4 +725,82 @@ footer .footer-content {
 
 .service-item:hover h3 {
     color: #0F1756;  /* Change color on hover */
+}
+/* Disable animations on mobile devices */
+@media (max-width: 768px) {
+    main p:hover::after {
+        animation: none; /* Remove pulse animation */
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        animation: none; /* Remove fadeIn animation */
+    }
+
+    .service-item:hover::after {
+        animation: none; /* Remove pulse animation */
+    }
+
+    .service-item:hover .service-icon {
+        transform: none; /* Remove rotation transformation */
+    }
+}
+
+@media (max-width: 768px) {
+/* Timeline Event */
+.timeline-event {
+    position: relative;
+    width: 50%;
+    padding: 10px 30px;
+    box-sizing: border-box;
+}
+
+.timeline-event:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-event:nth-child(even) {
+    left: 0;
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: #888;
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.timeline-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content h3 {
+    margin-top: 0;
+    color: #2a9df4;
+}
+
+.timeline-content p {
+    color: #555;
+}
+
+/* Connecting Line */
+.timeline-event::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: -6px;
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-event:nth-child(even)::after {
+    left: -6px;
+    right: auto;
+}
 }

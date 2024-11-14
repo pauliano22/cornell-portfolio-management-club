@@ -1,9 +1,17 @@
+// Define the minimum width for animations to run (e.g., 768px)
+const MIN_WIDTH_FOR_ANIMATIONS = 768;
+
+// Check if the screen width is greater than the threshold
+function shouldRunAnimations() {
+    return window.innerWidth > MIN_WIDTH_FOR_ANIMATIONS;
+}
+
 var NUM_PARTICLES, 
     THICKNESS = 50, 
     SPACING = 2, 
     MARGIN = 0, 
     COLOR = 0, 
-    DRAG = 0.93, 
+    DRAG = 0.90, 
     EASE = 0.25, 
     RESTORE_FORCE = 0.02;  // Restoring force
 
@@ -135,6 +143,8 @@ function step() {
     requestAnimationFrame(step);
   }
   
-
-// Initialize the particle system
-init();
+// Run the animation only if it should run
+if (shouldRunAnimations()) {
+  // Initialize the particle system
+  init();
+}
