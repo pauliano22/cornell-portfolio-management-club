@@ -3,7 +3,7 @@ var NUM_PARTICLES,
     SPACING = 2, 
     MARGIN = 0, 
     COLOR = 0, 
-    DRAG = 0.95, 
+    DRAG = 0.93, 
     EASE = 0.25, 
     RESTORE_FORCE = 0.02;  // Restoring force
 
