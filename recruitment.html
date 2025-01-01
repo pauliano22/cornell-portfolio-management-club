@@ -1,104 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cornell Portfolio Management Club - Recruitment</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="images/logo1.png">
+    <script src="particle-script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="particle-script.js" defer></script> <!-- Link to your JS file -->
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wdth,wght,GRAD@0,8..144,125,290,-50;1,8..144,125,290,-50&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
 </head>
+
 <body>
-        <header>
-            <!-- Add the logo image -->
-        <a href="https://www.cornellportfoliomanagement.com/index.html">
-            <img src="images/logo2.png" alt="Cornell Portfolio Management Club Logo" class="header-logo">
-        </a>
-    
-            <nav>
-                <ul class="nav-bar">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="recruitment.html">Recruitment</a></li>
-                    <li><a href="eboard.html">Executive Board</a></li>
-                </ul>
-           </nav>
-        </header>
-    
-        <div class="image2-background">
-            <h2>Recruitment</h2>
+    <!-- Dropdown Section (replacing navbar) -->
+    <div class="container mt-4">
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle btn-custom" type="button" id="dropdownMenuButton"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Menu
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="index.html">About Us</a></li>
+                <li><a class="dropdown-item" href="eboard.html">Executive Board</a></li>
+                <li><a class="dropdown-item" href="recruitment.html">Recruitment Timeline</a></li>
+            </ul>
         </div>
+    </div>
 
-        <section id="timeline" class="timeline-section">
-            <h2>Recruitment Timeline</h2>
-            <div class="timeline-container">
-                <div class="timeline-event">
-                    <div class="timeline-date">August 25, 2024</div>
-                    <div class="timeline-content">
-                        <h3>Application Opens</h3>
-                        <p>Kickstart your journey with CPMC! Applications for the fall recruitment cycle open online.</p>
-                    </div>
-                </div>
-                <div class="timeline-event">
-                    <div class="timeline-date">September 5, 2024</div>
-                    <div class="timeline-content">
-                        <h3>Info Session</h3>
-                        <p>Join us for an introductory session to learn more about our club and recruitment process.</p>
-                    </div>
-                </div>
-                <div class="timeline-event">
-                    <div class="timeline-date">September 12, 2024</div>
-                    <div class="timeline-content">
-                        <h3>Application Deadline</h3>
-                        <p>Submit your application by this date to be considered for the fall recruitment cycle.</p>
-                    </div>
-                </div>
-                <div class="timeline-event">
-                    <div class="timeline-date">September 18, 2024</div>
-                    <div class="timeline-content">
-                        <h3>First-Round Interviews</h3>
-                        <p>Selected applicants will participate in first-round interviews to assess their skills and interest.</p>
-                    </div>
-                </div>
-                <div class="timeline-event">
-                    <div class="timeline-date">September 25, 2024</div>
-                    <div class="timeline-content">
-                        <h3>Final Round Interviews</h3>
-                        <p>Final interviews with our executive team to select new members for the club.</p>
-                    </div>
-                </div>
-                <div class="timeline-event">
-                    <div class="timeline-date">October 1, 2024</div>
-                    <div class="timeline-content">
-                        <h3>Welcome New Members</h3>
-                        <p>Congratulations to our new members! Join us for an orientation and welcome event.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-    
+    <div class="image2-background">
+        <h2>Recruitment</h2>
+    </div>
 
-        <footer class="footer-particles">
-            <div id="footer-particles">
-                <canvas id="particle-canvas"></canvas>
-            </div>
-            <div class="footer-content">
-                <p>&copy; 2024 Cornell Portfolio Management Club</p>
-                <p>This organization is a registered student organization of Cornell University</p>
-        
-                <!-- Social Media Links -->
-                <div class="social-icons">
-                    <a href="https://www.instagram.com/cornellportfoliomanagementclub/" target="_blank" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/company/cornell-portfolio-management-club/" target="_blank" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
+    <section id="timeline" class="timeline-section">
+        <h2>Recruitment Timeline</h2>
+        <div class="timeline-container">
+            <div class="timeline-event">
+                <div class="timeline-date">August 25, 2024</div>
+                <div class="timeline-content">
+                    <h3>Application Opens</h3>
+                    <p>Kickstart your journey with CPMC! Applications for the fall recruitment cycle open online.</p>
                 </div>
             </div>
-        </footer>
-        
+            <div class="timeline-event">
+                <div class="timeline-date">September 5, 2024</div>
+                <div class="timeline-content">
+                    <h3>Info Session</h3>
+                    <p>Join us for an introductory session to learn more about our club and recruitment process.</p>
+                </div>
+            </div>
+            <div class="timeline-event">
+                <div class="timeline-date">September 12, 2024</div>
+                <div class="timeline-content">
+                    <h3>Application Deadline</h3>
+                    <p>Submit your application by this date to be considered for the fall recruitment cycle.</p>
+                </div>
+            </div>
+            <div class="timeline-event">
+                <div class="timeline-date">September 18, 2024</div>
+                <div class="timeline-content">
+                    <h3>First-Round Interviews</h3>
+                    <p>Selected applicants will participate in first-round interviews to assess their skills and
+                        interest.</p>
+                </div>
+            </div>
+            <div class="timeline-event">
+                <div class="timeline-date">September 25, 2024</div>
+                <div class="timeline-content">
+                    <h3>Final Round Interviews</h3>
+                    <p>Final interviews with our executive team to select new members for the club.</p>
+                </div>
+            </div>
+            <div class="timeline-event">
+                <div class="timeline-date">October 1, 2024</div>
+                <div class="timeline-content">
+                    <h3>Welcome New Members</h3>
+                    <p>Congratulations to our new members! Join us for an orientation and welcome event.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="footer-particles">
+        <div id="footer-particles">
+            <canvas id="particle-canvas"></canvas>
+        </div>
+        <div class="footer-content">
+            <p>&copy; 2024 Cornell Portfolio Management Club</p>
+            <p>This organization is a registered student organization of Cornell University</p>
+
+            <!-- Social Media Links -->
+            <div class="social-icons">
+                <a href="https://www.instagram.com/cornellportfoliomanagementclub/" target="_blank"
+                    aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/cornell-portfolio-management-club/" target="_blank"
+                    aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
 </body>
+
 </html>
