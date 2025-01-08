@@ -57,18 +57,37 @@ function init() {
     list[i] = p;
   }
 
-  // Track mouse movement and adjust coordinates
   // Track mouse movement and adjust coordinates based on viewport positioning
-    window.addEventListener('mousemove', function(e) {
-        // Get the mouse position relative to the footer
-        const footer = document.querySelector('footer');
-        const footerRect = footer.getBoundingClientRect();
-    
-        // Mouse position relative to the footer
-        mx = e.clientX - footerRect.left;  // Adjusted for the footer
-        my = e.clientY - footerRect.top;   // Adjusted for the footer
-        man = true;
-    });
+  window.addEventListener('mousemove', function (e) {
+      // Get the mouse position relative to the footer
+      const footer = document.querySelector('footer');
+      const footerRect = footer.getBoundingClientRect();
+
+      // Mouse position relative to the footer
+      mx = e.clientX - footerRect.left;
+      my = e.clientY - footerRect.top;
+
+      // Define a proximity threshold (in pixels)
+      const PROXIMITY_THRESHOLD = 100;
+
+      // Check if the mouse is near the center of the blue area
+      var isNearBluePart = false;
+
+      for (var i = 0; i < NUM_PARTICLES; i++) {
+          var p = list[i];
+          var dx = mx - p.x;
+          var dy = my - p.y;
+          var distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < PROXIMITY_THRESHOLD) {
+              isNearBluePart = true;
+              break; // Stop checking once we've found a close particle
+          }
+      }
+
+      // Switch to manual mode only if near the blue part
+      man = isNearBluePart;
+  });
 
 
   step();
