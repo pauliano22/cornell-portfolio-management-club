@@ -435,6 +435,7 @@ footer .footer-content {
     /* Main paragraph margin adjustment */
     main p {
         margin: 0 50px;
+        opacity: 0;
         /* Reduce the margin for smaller screens */
     }
 
@@ -496,6 +497,7 @@ footer .footer-content {
     /* Reduce the margin for paragraphs on very small screens */
     main p {
         margin: 0 20px;
+        opacity: 0;
         /* Even less margin on very small screens */
     }
 
@@ -843,28 +845,34 @@ footer .footer-content {
         font-size: 3rem;
     }
 
+    main p {
+        color:#000;
+        opacity: 0;
+        padding: 10%;
+    }
+
     main p:hover::after {
         animation: none;
         /* Remove pulse animation */
     }
 
     h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
+    h2 {
         animation: none;
         /* Remove fadeIn animation */
+        padding: 20%;
+        font-size: 3rem;
     }
 
     .service-item:hover::after {
         animation: none;
+        color:#000;
         /* Remove pulse animation */
     }
 
     .service-item:hover .service-icon {
         transform: none;
+        color:#000;
         /* Remove rotation transformation */
     }
 }
