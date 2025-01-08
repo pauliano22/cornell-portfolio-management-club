@@ -858,10 +858,10 @@ footer .footer-content {
 
     h1,
     h2 {
-        animation: none;
-        /* Remove fadeIn animation */
-        padding: 20%;
-        font-size: 3rem;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-size: 2rem;
     }
 
     .service-item:hover::after {
