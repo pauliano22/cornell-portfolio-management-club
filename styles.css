@@ -928,13 +928,11 @@ footer canvas {
 
     .service-item:hover::after {
         animation: none;
-        color:#000;
         /* Remove pulse animation */
     }
 
     .service-item:hover .service-icon {
         transform: none;
-        color:#000;
         /* Remove rotation transformation */
     }
 }
