@@ -23,7 +23,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: #FFFAF0;
+    background: white;
     /* #f9f9f9; */
     overflow-x: auto;
     /* Allow horizontal scrolling if content exceeds width */
@@ -98,7 +98,7 @@ header h1 {
 
 /* Navbar Styles */
 .navbar {
-    background-color: rgba(255, 250, 240, 1); /* Transparent background */
+    background-color: white;/* Transparent background */
     box-shadow: none; /* Remove shadow */
     padding: 10px 20px;
     position: fixed;
@@ -107,6 +107,7 @@ header h1 {
     width: 100%;
     z-index: 100;
     transition: background-color 0.3s ease;
+    color: black;
 }
 
 .navbar.scrolled {
@@ -779,8 +780,8 @@ footer canvas {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: relative;
     transition: transform 0.3s ease;
-    background: linear-gradient(90deg,#0F1756, white, white, white, white, white,white,white,white,white, white, #0F1756);
-    color: black;
+    background: #0F1756;
+    color: white;
 }
 
 .service-item:hover {
@@ -828,8 +829,8 @@ footer canvas {
 
 /* Service Icon Styling */
 .service-icon {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: #0F1756;
     border-radius: 50%;
     padding: 25px;
     margin-right: 20px;

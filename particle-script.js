@@ -7,8 +7,8 @@ function shouldRunAnimations() {
 }
 
 var NUM_PARTICLES, 
-    THICKNESS = 50, 
-    SPACING = 2, 
+    THICKNESS = 75, 
+    SPACING = 3, 
     MARGIN = 0, 
     COLOR = 0, 
     DRAG = 0.90, 
@@ -113,7 +113,7 @@ function step() {
         var d = Math.sqrt(dx * dx + dy * dy);
         
         // Normalize distance and apply force towards mouse
-        var force = Math.min(THICKNESS / (d * d), 1); // Ensure that the force doesn't go beyond a limit
+        var force = Math.min(THICKNESS / (d * d), 1) * 1.1; // Ensure that the force doesn't go beyond a limit
   
         // Stronger repelling force
         var repelFactor = 50;  // Stronger multiplier for repelling force
