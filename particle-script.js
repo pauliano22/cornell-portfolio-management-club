@@ -103,18 +103,18 @@ function step() {
       mx = w * 0.5 + (Math.cos(t * 2.1) * Math.cos(t * 0.9) * w * 0.45);
       my = h * 0.5 + (Math.sin(t * 3.2) * Math.tan(Math.sin(t * 0.8)) * h * 0.45);
     }
-    if (man) {
-      for (var i = 0; i < NUM_PARTICLES; i++) {
-        var p = list[i];
 
-        // Calculate distance to mouse
-        var dx = mx - p.x;
-        var dy = my - p.y;
-        var d = Math.sqrt(dx * dx + dy * dy);
+    for (var i = 0; i < NUM_PARTICLES; i++) {
+      var p = list[i];
 
-        // Normalize distance and apply force towards mouse
-        var force = Math.min(THICKNESS / (d * d), 1) * 1.1; // Ensure that the force doesn't go beyond a limit
+      // Calculate distance to mouse
+      var dx = mx - p.x;
+      var dy = my - p.y;
+      var d = Math.sqrt(dx * dx + dy * dy);
 
+      // Normalize distance and apply force towards mouse
+      var force = Math.min(THICKNESS / (d * d), 1) * 1.1; // Ensure that the force doesn't go beyond a limit
+      if (man) {
         // Stronger repelling force
         var repelFactor = 50;  // Stronger multiplier for repelling force
         if (d < THICKNESS) {
@@ -122,15 +122,14 @@ function step() {
           p.vx -= repelFactor * force * Math.cos(angle);  // Repelling force increases
           p.vy -= repelFactor * force * Math.sin(angle);  // Repelling force increases
         }
-
-        // Apply drag and ease to move towards the original resting position (ox, oy)
-        p.x += (p.vx *= DRAG) + (p.ox - p.x) * EASE;
-        p.y += (p.vy *= DRAG) + (p.oy - p.y) * EASE;
-
-        // Add a restoring force to slowly bring particles back to their original positions
-        p.x += (p.ox - p.x) * RESTORE_FORCE;
-        p.y += (p.oy - p.y) * RESTORE_FORCE;
       }
+      // Apply drag and ease to move towards the original resting position (ox, oy)
+      p.x += (p.vx *= DRAG) + (p.ox - p.x) * EASE;
+      p.y += (p.vy *= DRAG) + (p.oy - p.y) * EASE;
+
+      // Add a restoring force to slowly bring particles back to their original positions
+      p.x += (p.ox - p.x) * RESTORE_FORCE;
+      p.y += (p.oy - p.y) * RESTORE_FORCE;
     }
   } else {
     var imageData = ctx.createImageData(w, h);
