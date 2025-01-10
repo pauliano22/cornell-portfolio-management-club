@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wdth,wght,GRAD@0,8..144,125,290,-50;1,8..144,125,290,-50&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 /* General Reset */
 * {
@@ -27,7 +27,7 @@ body {
     /* #f9f9f9; */
     overflow-x: auto;
     /* Allow horizontal scrolling if content exceeds width */
-    animation: fadeInAnimation ease 3s;
+    animation: fadeInAnimation ease 1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
@@ -173,6 +173,11 @@ header h1 {
     height: 1.5rem;
 }
 
+.navbar-toggler {
+    border: none; 
+    box-shadow: none;
+}
+
 /* Make navbar collapse properly on small screens */
 @media (max-width: 768px) {
     .navbar {
@@ -182,6 +187,10 @@ header h1 {
 
     .navbar-toggler-icon {
         background-color: white;
+    }
+
+    .quant .navbar-toggler-icon {
+        background-color: #000 !important;
     }
 
     .navbar .navbar-nav .nav-link {
@@ -209,6 +218,7 @@ header h1 {
     transform: translate(-50%, -50%);
 }
 
+
 .overlay {
     position: absolute;
     top: 50%;
@@ -219,8 +229,12 @@ header h1 {
 }
 
 .video-title {
+    /* font-family: 'Montserrat'; */
+    font-weight: 700;
     font-size: 5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
 }
+
 
 /* Paragraph Styles */
 main p {
@@ -317,8 +331,19 @@ blockquote {
     align-items: center;       /* Center content horizontally */
 }
 
+
 .member-pic {
-    width: 15vw;
+    width: 100%;
+    max-width: 120px; /* Maximum size */
+    min-width: 80px;  /* Minimum size */
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.member h3, .member p {
+    margin: 5px 0; /* Ensure consistent spacing for text */
+    text-align: center;
 }
 
 .member:hover {
@@ -495,12 +520,22 @@ footer canvas {
     position: relative;
 }
 
+.popup-image {
+    margin-bottom: 20px;
+}
+
 .close-btn {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: -10px;
+    right: 20px;
     cursor: pointer;
     font-size: 60px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.close-btn:hover {
+    transform: scale(1.02);
+    color: red;
 }
 
 /* Animations */
@@ -559,6 +594,8 @@ footer canvas {
         grid-template-columns: repeat(2, 1fr);
         /* Two columns on medium screens */
     }
+
+    
 
     /* Timeline Event Adjustments */
     .timeline-event {
@@ -834,6 +871,7 @@ footer canvas {
     background-color: transparent;
     padding-left: 10%;
     padding-right: 10%;
+    text-align: center;
 
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
