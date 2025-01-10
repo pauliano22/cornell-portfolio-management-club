@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cornell Portfolio Management Club - Eboard</title>
+    <link rel="icon" type="image/png" href="images/logo1.png">
+    <script src="particle-script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wdth,wght,GRAD@0,8..144,125,290,-50;1,8..144,125,290,-50&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<quant-body>
+    <!-- Navbar (With Contacts) -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: black;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="images/logo2.png" alt="Cornell Portfolio Management Club Logo" class="header-logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: white;" href="index.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: white;" href="eboard.html">Executive Board</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: white;" href="recruitment.html">Recruitment Timeline</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: white;" href="quant.html">Quant</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Dropdown Section (replacing navbar)
+    <div class="container mt-4">
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle btn-custom" type="button" id="dropdownMenuButton"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Menu
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="index.html">About Us</a></li>
+                <li><a class="dropdown-item" href="eboard.html">Executive Board</a></li>
+                <li><a class="dropdown-item" href="recruitment.html">Recruitment Timeline</a></li>
+                <li><a class="dropdown-item" href="Quant.html">Quant</a></li>
+            </ul>
+        </div>
+    </div> -->
+
+    <div class="image6-background">
+        <h1>Quantitative Finance</h1>
+    </div>
+
+    <section id="eboard">
+        <div class="eboard-members">
+            <div class="member" style="background-color: transparent; color: white;" onclick="showPopup('member1')">
+                <img src="images/people/paul.jpg" alt="Cornell Portfolio Management Club Logo" class="member-pic">
+                <h3>Paul Iacobucci</h3>
+                <p>Head of Quantitative Finance</p>
+            </div>
+            <div class="member" style="background-color: transparent; color: white;" onclick="showPopup('member2')">
+                <img src="images/people/gabriel.jpg" alt="Cornell Portfolio Management Club Logo" class="member-pic">
+                <h3>Gabriel Castillo</h3>
+                <p>Lead Quantitative Developer</p>
+            </div>
+            <div class="member" style="background-color: transparent; color: white;" onclick="showPopup('member3')">
+                <img src="images/people/akhil.jpg" alt="Cornell Portfolio Management Club Logo" class="member-pic">
+                <h3>Akhil Kagithapu</h3>
+                <p>Lead Quantitative Developer</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-particles" style="background-color: black;">
+        <div id="footer-particles">
+            <canvas id="particle-canvas"></canvas>
+        </div>
+        <div class="footer-content">
+            <p>&copy; 2024 Cornell Portfolio Management Club</p>
+            <p>This organization is a registered student organization of Cornell University</p>
+
+            <!-- Social Media Links -->
+            <div class="social-icons">
+                <a href="https://www.instagram.com/cornellportfoliomanagementclub/" target="_blank"
+                    aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/cornell-portfolio-management-club/" target="_blank"
+                    aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Popup Modal -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="hidePopup()">&times;</span>
+            <img id="popup-image" src="images/logo1.jpg" alt="" class="popup-image">
+            <h3 id="member-name"></h3>
+            <p id="member-info"></p>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

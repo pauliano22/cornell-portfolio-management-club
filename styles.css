@@ -27,6 +27,30 @@ body {
     /* #f9f9f9; */
     overflow-x: auto;
     /* Allow horizontal scrolling if content exceeds width */
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+quant-body {
+    font-family: Merriweather, 'Roboto Serif', serif;
+    font-optical-sizing: auto;
+    font-weight: 290;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 125,
+        "GRAD" -50;
+    
+    font-size: large;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: black;
+    /* #f9f9f9; */
+    overflow-x: auto;
+    /* Allow horizontal scrolling if content exceeds width */
+    transition: opacity 0.5s ease-out;
 }
 
 html {
@@ -109,6 +133,17 @@ header h1 {
     transition: background-color 0.3s ease;
     color: black;
 }
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 
 .navbar.scrolled {
     background-color: rgba(255, 255, 255, 0.9); /* Light background on scroll */
@@ -264,18 +299,26 @@ blockquote {
 
 .eboard-members {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
 }
 
 .member {
-    background-color: #fff;
+    background-color: white;
     border: 1px solid #ddd;
     border-radius: 8px;
     text-align: center;
-    padding: 10px;
+    padding: 10%;
     cursor: pointer;
     transition: transform 0.2s;
+    display: flex;             /* Enable Flexbox */
+    flex-direction: column;    /* Stack children vertically */
+    justify-content: flex-end; /* Push content to the bottom */
+    align-items: center;       /* Center content horizontally */
+}
+
+.member-pic {
+    width: 15vw;
 }
 
 .member:hover {
@@ -345,6 +388,21 @@ blockquote {
 
 .image5-background {
     background-image: url('images/cornell5.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    font-size: xx-large;
+    overflow: hidden;
+}
+
+.image6-background {
+    background-image: url('images/cornell6.jpg');
     background-size: cover;
     background-position: center;
     height: 400px;
@@ -442,6 +500,7 @@ footer canvas {
     top: 10px;
     right: 10px;
     cursor: pointer;
+    font-size: 60px;
 }
 
 /* Animations */
