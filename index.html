@@ -1,198 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cornell Portfolio Management Club - Home</title>
-    <link rel="icon" type="image/png" href="images/logo1.png">
-    <script src="particle-script.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Management Club</title>
     <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wdth,wght,GRAD@0,8..144,125,290,-50;1,8..144,125,290,-50&display=swap"
-        rel="stylesheet">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <a class="navbar-brand" href="#">
+        <img src="./images/logo-full.svg" height="50" alt="Logo" />
+      </a>
+      <button
+        class="navbar-toggler custom-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link manrope-regular" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link manrope-regular" href="#">Executive Board</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link manrope-regular" href="#"
+              >Recruitment Timeline</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link manrope-regular" href="#">Quant</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
     <!-- Video Background Section -->
-    <div class="video-background d-flex align-items-center justify-content-center position-relative">
-        <video autoplay muted loop>
-            <source src="images/FINAL-BACKGROUND.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-
-        <!-- Navbar (With Contacts) -->
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html"><img src="images/logo2.png" alt="Cornell Portfolio Management Club Logo" class="header-logo"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="eboard.html">Executive Board</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="recruitment.html">Recruitment Timeline</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="quant.html">Quant</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <div class="video-subtitle">
-            Cornell's Premier Portfolio Management Association
-        </div>
-
-        <div class="overlay text-center">
-            <span class="video-title">Cornell Portfolio Management Club</span>
-        </div>
-
-        <div class="scroll-down position-absolute" style="bottom: 20px;">
-            <img src="images/arrow.png" alt="Scroll Down">
-        </div>
-
-    </div>
-    <div class="about-mission-container">
-        <div class="services-section">
-            <!-- About Us Section -->
-            <div class="service-item">
-                <div class="service-text">
-                    <h2>About Us</h2>
-                    <p>
-                        The Cornell Portfolio Management Club (CPMC) is a student-led organization dedicated
-                        to providing members with a comprehensive understanding of investment strategies,
-                        portfolio management, and the financial markets.
-                    </p>
-                </div>
-            </div>
-            <div class="service-item">
-                <div class="service-text">
-                    <h2>Our Mission</h2>
-                    <p>
-                        The Cornell Portfolio Management Club's mission is to empower students with practical investment
-                        knowledge and hands-on portfolio management experience. Through our extensive new member education
-                        program, we strive to bridge the gap between academic theory and professional practice, preparing
-                        our members for successful careers in finance and investment management.
-                    </p>
-                </div>
-            </div>
-        </div>
+        <div
+      class="video-background d-flex align-items-center justify-content-center position-relative"
+    >
+      <video autoplay muted loop>
+        <source src="images/FINAL-BACKGROUND.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    
+      <div class="content-center text-center position-absolute w-100">
+        <h2 class="manrope-light">Cornell's Premier Portfolio Management Association</h2>
+        <h1>Cornell Portfolio Management Club</h1>
+      </div>
+    
+      <div class="scroll-down position-absolute" style="bottom: 20px">
+        <img src="images/chevron-down.svg" alt="Scroll Down" />
+      </div>
     </div>
 
-
-
-    <div class="image4-background">
-        <h1>What We Offer</h1>
-    </div>
-
-    <!-- Services Section -->
-    <section class="services-section">
-        <!-- Service 1: Investment Education -->
-        <div class="service-item">
-            <div class="service-text">
-                <h2>Investment Education</h2>
-                <p>
-                    We provide in-depth educational resources and workshops focused on investment strategies, financial
-                    analysis, and portfolio management. Our goal is to equip our members with the tools they need to
-                    make
-                    informed investment decisions.
-                </p>
-            </div>
-            <div class="service-icon">
-                <i class="fas fa-book"></i> <!-- Icon for Investment Education -->
-            </div>
-        </div>
-
-        <!-- Service 2: Portfolio Management Experience -->
-        <div class="service-item">
-            <div class="service-text">
-                <h2>Portfolio Management Experience</h2>
-                <p>
-                    Through hands-on projects and real-world simulations, we give our members the opportunity to manage
-                    actual portfolios. This experience allows students to apply what they have learned in a practical
-                    and impactful way.
-                </p>
-            </div>
-            <div class="service-icon">
-                <i class="fas fa-chart-pie"></i> <!-- Icon for Portfolio Management -->
-            </div>
-        </div>
-
-        <!-- Service 3: Networking Opportunities -->
-        <div class="service-item">
-            <div class="service-text">
-                <h2>Networking Opportunities</h2>
-                <p>
-                    We host events such as speaker sessions, networking mixers, and career panels where students can
-                    meet professionals in the finance industry. These events allow our members to connect with top
-                    executives, financial analysts, and recruiters from prestigious firms.
-                </p>
-            </div>
-            <div class="service-icon">
-                <i class="fas fa-users"></i> <!-- Icon for Networking -->
-            </div>
-        </div>
-
-        <!-- Service 4: Resume Building & Career Development -->
-        <div class="service-item">
-            <div class="service-text">
-                <h2>Resume Building & Career Development</h2>
-                <p>
-                    We offer resume workshops, mock interviews, and career development sessions tailored to those
-                    pursuing
-                    careers in finance. We help our members refine their resumes, improve interview skills, and increase
-                    their job prospects in finance.
-                </p>
-            </div>
-            <div class="service-icon">
-                <i class="fas fa-briefcase"></i> <!-- Icon for Career Development -->
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Footer Section with Particle Effect -->
-    <footer class="footer-particles">
-        <div id="footer-particles">
-            <canvas id="particle-canvas"></canvas>
-        </div>
-        <div class="footer-content">
-            <p>&copy; 2024 Cornell Portfolio Management Club</p>
-            <p>This organization is a registered student organization of Cornell University</p>
-
-            <!-- Social Media Links -->
-            <div class="social-icons">
-                <a href="https://www.instagram.com/cornellportfoliomanagementclub/" target="_blank"
-                    aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.linkedin.com/company/cornell-portfolio-management-club/" target="_blank"
-                    aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
 </html>
