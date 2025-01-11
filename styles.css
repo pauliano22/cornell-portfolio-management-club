@@ -1,6 +1,7 @@
 /* COLORS */
 :root {
   --text-color: #232a6c;
+  --dark-text-color: #040727;
   --mid-color: #5660b1;
   --background-color: #fefeff;
 }
@@ -235,20 +236,19 @@ body {
   line-height: 1.8;
   color: var(--text-color);
 }
-
-/* WHAT WE OFER SECTION */
+/* WHAT WE OFFER SECTION */
 #what-we-offer {
-  padding: 3rem 3rem 2rem 3rem;
+  padding: 2rem 3rem 2rem 3rem;
   background-color: var(--background-color);
   color: var(--text-color);
   width: 100%;
 }
 
-#abwhat-we-offerout .row {
+#what-we-offer .row {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 5rem; /* Add space between the columns */
+  gap: 3rem; /* Increase space between the columns and rows */
 }
 
 #what-we-offer .col-md-6 {
@@ -257,29 +257,20 @@ body {
 }
 
 #what-we-offer h2 {
-  font-size: 1.9rem;
+  font-size: 2.5rem;
+  font-style: italic;
   color: var(--text-color);
-  margin-bottom: 20px;
+}
+
+#what-we-offer h3 {
+  font-size: 1.8rem;
+  color: var(--text-color);
 }
 
 #what-we-offer p {
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.8;
   color: var(--text-color);
-}
-
-.profile-image {
-  width: 400px;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 40px;
-}
-
-.profile-image {
-  width: 400px;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 40px;
 }
 
 /* RESPONSIVENESS */
@@ -296,5 +287,11 @@ body {
   }
   .content-center h2 {
     font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 1113px) {
+  #what-we-offer .row {
+    gap: 1rem; 
   }
 }
