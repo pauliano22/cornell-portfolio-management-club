@@ -15,6 +15,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
   </head>
   <body>
     <!-- NAVBAR -->
@@ -36,44 +40,135 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link manrope-regular" href="#">About</a>
+            <a class="nav-link sans-regular" href="#">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link manrope-regular" href="#">Executive Board</a>
+            <a class="nav-link sans-regular" href="#">Executive Board</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link manrope-regular" href="#"
-              >Recruitment Timeline</a
-            >
+            <a class="nav-link sans-regular" href="#">Recruitment Timeline</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link manrope-regular" href="#">Quant</a>
+            <a class="nav-link sans-regular" href="#">Quant</a>
           </li>
         </ul>
       </div>
     </nav>
 
     <!-- Video Background Section -->
-        <div
+    <div
       class="video-background d-flex align-items-center justify-content-center position-relative"
     >
       <video autoplay muted loop>
         <source src="images/FINAL-BACKGROUND.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-    
+
       <div class="content-center text-center position-absolute w-100">
-        <h2 class="manrope-light">Cornell's Premier Portfolio Management Association</h2>
-        <h1>Cornell Portfolio Management Club</h1>
-        <button type="button" id="coffeeChatButton" class="btn btn-outline-light btn-lg mt-4 manrope-light">
+        <h2 class="sans-light">
+          Cornell's Premier Portfolio Management Association
+        </h2>
+        <h1 class="serif-regular">Cornell Portfolio Management Club</h1>
+        <button
+          type="button"
+          id="coffeeChatButton"
+          class="btn btn-outline-light btn-lg mt-4 manrope-light"
+        >
           Request Coffee Chat
-      </button>
+        </button>
       </div>
-    
+
       <div class="scroll-down position-absolute" style="bottom: 20px">
         <img src="images/chevron-down.svg" alt="Scroll Down" />
       </div>
     </div>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="text-center">
+      <div class="row justify-content-center">
+        <div class="col-md-6 mb-4">
+          <i class="fas fa-university fa-5x mb-4"></i>
+          <h2 class="mb-4 serif-regular">About Us</h2>
+          <div class="sans-serif-light">
+            <p>
+              The Cornell Portfolio Management Club (CPMC) is a student-led
+              organization dedicated to providing members with a comprehensive
+              understanding of investment strategies, portfolio management, and
+              the financial markets.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <i class="fas fa-bullseye fa-5x mb-4"></i>
+          <h2 class="mb-4 serif-regular">Our Mission</h2>
+          <div class="sans-serif-light">
+            <p>
+              Our mission is to equip students with practical investment
+              knowledge and hands-on experience. We bridge the gap between
+              academic theory and professional practice, preparing members for
+              successful careers in finance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="what-we-offer" class="text-center mt-5">
+      <h2 class="serif-regular mb-5">What We Offer</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-6 mb-4">
+          <i class="fas fa-chart-line fa-5x mb-4"></i>
+          <h2 class="mb-4 serif-regular">Investment Education</h2>
+          <div class="sans-serif-light">
+            <p>
+              We provide in-depth educational resources and workshops focused on
+              investment strategies, financial analysis, and portfolio
+              management. Our goal is to equip our members with the tools they
+              need to make informed investment decisions.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-6 mb-4">
+          <i class="fas fa-briefcase fa-5x mb-4"></i>
+          <h2 class="mb-4 serif-regular">Portfolio Management Experience</h2>
+          <div class="sans-serif-light">
+            <p>
+              Through hands-on projects and real-world simulations, we give our
+              members the opportunity to manage actual portfolios. This
+              experience allows students to apply what they have learned in a
+              practical and impactful way.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-6 mb-4">
+          <i class="fas fa-network-wired fa-5x mb-4"></i>
+          <h2 class="mb-4 serif-regular">Networking Opportunities</h2>
+          <div class="sans-serif-light">
+            <p>
+              We host events such as speaker sessions, networking mixers, and
+              career panels where students can meet professionals in the finance
+              industry. These events allow our members to connect with top
+              executives, financial analysts, and recruiters from prestigious
+              firms.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-6 mb-4">
+          <i class="fas fa-file-alt fa-5x mb-4"></i>
+          <h2 class="mb-4 serif-regular">
+            Resume Building & Career Development
+          </h2>
+          <div class="sans-serif-light">
+            <p>
+              We offer resume workshops, mock interviews, and career development
+              sessions tailored to those pursuing careers in finance. We help
+              our members refine their resumes, improve interview skills, and
+              increase their job prospects in finance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- SCRIPTS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
