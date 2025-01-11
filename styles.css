@@ -208,9 +208,10 @@ body {
 /* ABOUT SECTION */
 #about {
   padding: 3rem 3rem 2rem 3rem;
-  background: linear-gradient(
+  background: var(--background-color);
+  /* linear-gradient(
     to right, var(--background-color) 0%, var(--background-color) 50%, var(--text-color) 50%, var(--text-color) 100%
-  );
+  ); */
   color: var(--text-color);
   width: 100%;
 }
@@ -237,12 +238,12 @@ body {
   line-height: 1.8;
 }
 
-
-#about .mission-section h2,
+/* GRADIENT STYLE optional */
+/* #about .mission-section h2,
 #about .mission-section p,
 #about .mission-section i {
   color: var(--background-color);
-}
+}  */
 
 /* WHAT WE OFFER SECTION */
 #what-we-offer {
