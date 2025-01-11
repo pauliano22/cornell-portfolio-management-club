@@ -3,47 +3,47 @@ const memberInfo = {
     member1: {
         name: "Member 1",
         info: "Member 1 is responsible for overseeing the financial aspects of the club.",
-        image: "images/logo1.png" // Replace with actual image URL
+        image: "images/filler.png" // Replace with actual image URL
     },
     member2: {
         name: "Member 2",
         info: "Member 2 focuses on outreach and building relationships with industry partners.",
-        image: "images/logo1.png" // Replace with actual image URL
+        image: "images/filler.png" // Replace with actual image URL
     },
     member3: {
         name: "Member 3",
         info: "Member 3 manages club events and ensures smooth operations.",
-        image: "images/logo1.png" // Replace with actual image URL
+        image: "images/filler.png" // Replace with actual image URL
     },
     member4: {
         name: "Member 4",
         info: "Member 4 is in charge of marketing and promoting the club's initiatives.",
-        image: "images/logo1.png" // Replace with actual image URL
+        image: "images/filler.png" // Replace with actual image URL
     },
     member5: {
         name: "Member 5",
         info: "Member 5 assists with research and analysis of market trends.",
-        image: "images/logo1.png" // Replace with actual image URL
+        image: "images/filler.png" // Replace with actual image URL
     },
     member6: {
         name: "Member 6",
         info: "Member 6 coordinates workshops and educational sessions for members.",
-        image: "images/logo1.png" // Replace with actual image URL
+        image: "images/filler.png" // Replace with actual image URL
     },
     member7: {
         name: "Member 7",
         info: "Member 7 handles club finances and budgeting.",
-        image: "images/logo1.png" // Replace with actual image URL
+        image: "images/filler.png" // Replace with actual image URL
     },
     member8: {
         name: "Member 8",
         info: "Member 8 is responsible for social media and online presence.",
-        image: "images/logo1.png" // Replace with actual image URL
+        image: "images/filler.png" // Replace with actual image URL
     },
     member9: {
         name: "Member 9",
         info: "Member 9 supports new members with onboarding and resources.",
-        image: "images/logo1.png" // Replace with actual image URL
+        image: "images/filler.png" // Replace with actual image URL
     }
 };
 

@@ -351,12 +351,11 @@ h1 {
 #eboard .container {
   align-items: center;
   justify-self: center;
-  font-size: 3rem;
   margin: 3rem 3rem;
-  font-style: italic;
   color: var(--text-color);
 }
 
+/* This is the card*/
 #eboard .container .col-12 {
   display: flex;
   justify-content: center;
@@ -364,11 +363,12 @@ h1 {
   flex-wrap: wrap;
   gap: 0rem;
   max-width: 300px;
-  margin-bottom: 2rem; 
-  font-family: Baskerville;
+  margin-bottom: 2rem;
 }
 
-#eboard h3 {
+#eboard h3, .popup-content h3 {
+  font-style: italic;
+  font-family: Baskerville;
   margin-bottom: 0;
   text-align: center;
 }
@@ -378,6 +378,7 @@ h1 {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  cursor: pointer;
 }
 
 .member-description {
@@ -386,9 +387,7 @@ h1 {
   font-size: 0.9rem;
   text-align: center;
   word-wrap: break-word; /* Ensure long words break to the next line */
-
 }
-
 
 /* FOOTER */
 #footer-particles {
@@ -433,9 +432,18 @@ h1 {
   justify-content: center;
   align-items: center;
   position: relative;
+  color: var(--text-color);
 }
 
-.popup-image, .member-pic {
+.member-info {
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.popup-image,
+.member-pic {
   margin-bottom: 20px;
   border-radius: 5px;
   width: 120px;
@@ -446,6 +454,7 @@ h1 {
 }
 
 .close-btn {
+  color: var(--text-color);
   position: absolute;
   top: -10px;
   right: 20px;
@@ -500,6 +509,14 @@ footer {
 }
 
 /* RESPONSIVENESS */
+/* Phone */
+@media (max-width: 600px) {
+  .popup-content {
+    width: 90%;
+    height: 60%;
+  }
+}
+
 @media (max-width: 992px) {
   .navbar-nav .nav-item {
     margin-right: 0;
