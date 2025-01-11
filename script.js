@@ -44,6 +44,21 @@ const memberInfo = {
         name: "Member 9",
         info: "Member 9 supports new members with onboarding and resources.",
         image: "images/filler.png" // Replace with actual image URL
+    },
+    paul: {
+        name: "Paul Iacobucci",
+        info: "Paul is the Co-Founder, VP of Technology and the Head of Quantitative Finance for this club! He made version 1 of the website, and you do not want to see that!",
+        image: "images/people/paul.jpg" // Replace with actual image URL
+    },
+    akhil: {
+        name: "Akhil Kagithapu",
+        info: "Akhil is just chill guy. His website domain is lowkey impossible to remember tho.",
+        image: "images/people/akhil.jpg" // Replace with actual image URL
+    },
+    gabriel: {
+        name: "Gabriel Castillo",
+        info: "...",
+        image: "images/people/gabriel.jpg" // Replace with actual image URL
     }
 };
 

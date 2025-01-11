@@ -24,9 +24,9 @@
   </head>
   <body class="quant-body">
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top quant-navbar">
       <a class="navbar-brand" href="index.html">
-        <img src="./images/logo-full.svg" height="50" alt="Logo" />
+        <img src="./images/logo-white.svg" height="50" alt="Logo" />
       </a>
       <button
         class="navbar-toggler custom-toggler"
@@ -73,7 +73,7 @@
         <div class="row">
           <div
             class="col-12 col-sm-6 col-md-4 fade-in"
-            onclick="showPopup('member1')"
+            onclick="showPopup('paul')"
           >
             <div
               class="member"
@@ -90,7 +90,7 @@
           </div>
           <div
             class="col-12 col-sm-6 col-md-4 fade-in"
-            onclick="showPopup('member2')"
+            onclick="showPopup('gabriel')"
           >
             <div
               class="member"
@@ -107,7 +107,7 @@
           </div>
           <div
             class="col-12 col-sm-6 col-md-4 fade-in"
-            onclick="showPopup('member3')"
+            onclick="showPopup('akhil')"
           >
             <div
               class="member"
@@ -127,7 +127,7 @@
     </section>
 
     <!-- FOOTER WITH PARTICLES -->
-    <footer class="sans-regular">
+    <footer class="sans-regula quant-footer">
       <div class="footer-content fade-in">
         <p>&copy; 2024 Cornell Portfolio Management Club</p>
         <p>
@@ -154,6 +154,21 @@
         </div>
       </div>
     </footer>
+
+     <!-- Popup Modal -->
+    <div id="popup" class="popup">
+      <div class="popup-content quant-popup">
+        <span class="close-btn" onclick="hidePopup()">&times;</span>
+        <img
+          id="popup-image"
+          src="images/filler.png"
+          alt=""
+          class="popup-image"
+        />
+        <h3 id="member-name"></h3>
+        <p id="member-info"></p>
+      </div>
+    </div>
 
     <!-- SCRIPTS -->
     <script>
