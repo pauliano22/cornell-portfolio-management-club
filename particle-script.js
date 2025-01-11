@@ -7,13 +7,13 @@ function shouldRunAnimations() {
 }
 
 var NUM_PARTICLES,
-  THICKNESS = 75,
+  THICKNESS = 50,
   SPACING = 3,
   MARGIN = 0,
   COLOR = 0,
   DRAG = 0.90,
   EASE = 0.25,
-  RESTORE_FORCE = 0.02;  // Restoring force
+  RESTORE_FORCE = 0.01;  // Restoring force
 
 var container, canvas, ctx, particle, list, tog, man, mx, my, w, h;
 
@@ -94,8 +94,8 @@ function init() {
 }
 
 function step() {
-  // Clear canvas
-  ctx.clearRect(0, 0, w, h);
+  // THIS MESSSES UP THE THING!
+  // ctx.clearRect(0, 0, w, h);
 
   if (tog = !tog) {
     if (!man) {
