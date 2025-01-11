@@ -148,9 +148,9 @@ function step() {
         data[n + 1] = 255;  // Light blue G
         data[n + 2] = 255;  // Light blue B
       } else {
-        data[n] = 0;  // Black R
-        data[n + 1] = 0;  // Black G
-        data[n + 2] = 0;  // Black B
+        data[n] = 4;  // Dark blue R
+        data[n + 1] = 7;  // Dark blue G
+        data[n + 2] = 39;  // Dark blue B
       }
 
       data[n + 3] = 255; // Full opacity
