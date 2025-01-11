@@ -208,7 +208,9 @@ body {
 /* ABOUT SECTION */
 #about {
   padding: 3rem 3rem 2rem 3rem;
-  background-color: var(--background-color);
+  background: linear-gradient(
+    to right, var(--background-color) 0%, var(--background-color) 50%, var(--text-color) 50%, var(--text-color) 100%
+  );
   color: var(--text-color);
   width: 100%;
 }
@@ -227,19 +229,25 @@ body {
 
 #about h2 {
   font-size: 1.9rem;
-  color: var(--text-color);
   margin-bottom: 20px;
 }
 
 #about p {
   font-size: 1.125rem;
   line-height: 1.8;
-  color: var(--text-color);
 }
+
+
+#about .mission-section h2,
+#about .mission-section p,
+#about .mission-section i {
+  color: var(--background-color);
+}
+
 /* WHAT WE OFFER SECTION */
 #what-we-offer {
   padding: 2rem 3rem 2rem 3rem;
-  background-color: var(--background-color);
+  background-color: var(--dark-text-color);
   color: var(--text-color);
   width: 100%;
 }
@@ -250,27 +258,35 @@ body {
   flex-wrap: wrap;
   gap: 3rem; /* Increase space between the columns and rows */
 }
-
 #what-we-offer .col-md-6 {
+  padding: 1.8rem;
   max-width: 500px; /* Adjust the value as needed */
   flex: 1 1 500px;
+  border-radius: 24px;
+  border: 0.1rem solid var(--mid-color);
+  background-color: var(--background-color);
+  transition: box-shadow 0.3s ease;
+  cursor: default;
+}
+
+#what-we-offer .col-md-6:hover {
+  box-shadow: 0 0 2rem var(--mid-color);
 }
 
 #what-we-offer h2 {
-  font-size: 2.5rem;
+  margin: 3rem 0 ;
+  font-size: 3rem;
   font-style: italic;
-  color: var(--text-color);
+  color: var(--background-color);
 }
 
 #what-we-offer h3 {
   font-size: 1.8rem;
-  color: var(--text-color);
 }
 
 #what-we-offer p {
   font-size: 1rem;
   line-height: 1.8;
-  color: var(--text-color);
 }
 
 /* RESPONSIVENESS */
@@ -294,4 +310,11 @@ body {
   #what-we-offer .row {
     gap: 1rem; 
   }
+
+  #about {
+    background: linear-gradient(
+      to bottom, var(--background-color) 0%, var(--background-color) 50%, var(--text-color) 50%, var(--text-color) 100%
+    );
+  }
+
 }
