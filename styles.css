@@ -4,7 +4,8 @@
   --dark-text-color: #040727;
   --mid-color: #5660b1;
   --background-color: #fefeff;
-  --transition-duration: 0.5s; /* Define the transition duration variable */
+  --transition-duration: 0.5s;
+  /* Define the transition duration variable */
 }
 
 /* FONTS! */
@@ -12,6 +13,7 @@
   font-family: Baskerville;
   src: url('fonts/NewBaskervilleStd-Roman.ttf');
 }
+
 @font-face {
   font-family: Baskerville;
   font-weight: bold;
@@ -96,8 +98,10 @@ h1 {
 .custom-toggler.navbar-toggler {
   border-width: 0;
 }
+
 .navbar-nav .nav-item {
-  margin-right: 15px; /* Adjust the value as needed */
+  margin-right: 15px;
+  /* Adjust the value as needed */
 }
 
 .navbar-nav .nav-link {
@@ -129,7 +133,8 @@ h1 {
   position: relative;
   height: 100vh;
   width: 100vw;
-  overflow: hidden; /* Hide any overflow */
+  overflow: hidden;
+  /* Hide any overflow */
   background-size: cover;
 }
 
@@ -143,7 +148,8 @@ h1 {
   height: auto;
   z-index: -1;
   transform: translate(-50%, -50%);
-  object-fit: cover; /* Ensure the video covers the entire container */
+  object-fit: cover;
+  /* Ensure the video covers the entire container */
   z-index: -1;
 }
 
@@ -154,7 +160,8 @@ h1 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* Adjust the opacity as needed */
+  background: rgba(0, 0, 0, 0.4);
+  /* Adjust the opacity as needed */
   z-index: 0;
 }
 
@@ -186,7 +193,8 @@ h1 {
   padding: 0.5rem 0.8rem;
   border-width: 0.09rem;
   position: absolute;
-  bottom: -50%; /* Adjust the value as needed to push the button lower */
+  bottom: -50%;
+  /* Adjust the value as needed to push the button lower */
   left: 50%;
   transform: translateX(-50%);
   box-shadow: 0px 0px 35px rgba(35, 42, 108, 0.2);
@@ -211,6 +219,7 @@ h1 {
 }
 
 @keyframes bounce {
+
   0%,
   20%,
   50%,
@@ -218,9 +227,11 @@ h1 {
   100% {
     transform: translateY(0);
   }
+
   40% {
     transform: translateY(-10px);
   }
+
   60% {
     transform: translateY(-5px);
   }
@@ -241,11 +252,13 @@ h1 {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 3rem; /* Add space between the columns */
+  gap: 3rem;
+  /* Add space between the columns */
 }
 
 #about .col-md-6 {
-  max-width: 500px; /* Adjust the value as needed */
+  max-width: 500px;
+  /* Adjust the value as needed */
   flex: 1 1 500px;
 }
 
@@ -271,11 +284,14 @@ h1 {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 3rem; /* Increase space between the columns and rows */
+  gap: 3rem;
+  /* Increase space between the columns and rows */
 }
+
 #what-we-offer .col-md-6 {
   padding: 1.8rem;
-  max-width: 500px; /* Adjust the value as needed */
+  max-width: 500px;
+  /* Adjust the value as needed */
   flex: 1 1 500px;
   border-radius: 24px;
   border: 0.1rem solid var(--mid-color);
@@ -323,7 +339,8 @@ h1 {
 }
 
 .image-background::before {
-  background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+  background: rgba(0, 0, 0, 0.5);
+  /* Adjust the opacity as needed */
   content: '';
   position: absolute;
   top: 0;
@@ -387,7 +404,8 @@ h1 {
   font-style: normal;
   font-size: 0.9rem;
   text-align: center;
-  word-wrap: break-word; /* Ensure long words break to the next line */
+  word-wrap: break-word;
+  /* Ensure long words break to the next line */
 }
 
 /* FOOTER */
@@ -447,11 +465,16 @@ h1 {
 .member-pic {
   margin-bottom: 20px;
   border-radius: 5px;
-  width: 120px;
-  height: 150px;
+  width: 150px;
+  height: 200px;
   object-fit: cover;
   object-position: top;
   overflow: hidden;
+  transition: 0.4s ease-in ;
+}
+
+.member-pic:hover {
+  box-shadow: 0 0 1rem black;
 }
 
 .close-btn {
@@ -508,6 +531,7 @@ footer {
 .social-icons a:hover {
   color: var(--mid-color);
 }
+
 /* ~~~~~~~~~~~~~ QUANT BABY! ~~~~~~~~~~~~~~ */
 #eboard {
   width: 100%;
@@ -515,7 +539,7 @@ footer {
 }
 
 #popup .quant-popup {
-  background-color: black; 
+  background-color: black;
   color: var(--background-color);
   width: 100%;
   height: 100%;
@@ -553,6 +577,75 @@ nav.quant-navbar .navbar-nav .nav-link::after {
 nav.quant-navbar .custom-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(254, 254, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
+
+.custom-size {
+  width: 50px; /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+  font-size: 50px;
+}
+
+.icon-container {
+  display: flex;          /* Use Flexbox for layout */
+  justify-content: space-evenly; /* Evenly space the icons */
+  align-items: center;    /* Vertically center the icons */
+  gap: 1rem;              /* Optional: Add space between icons */
+}
+
+/* QUANT WE OFFER SECTION */
+#quant-we-offer {
+  padding: 2rem 3rem 2rem 3rem;
+  background-color: black;
+  color: black;
+  width: 100%;
+}
+
+#quant-we-offer .row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  /* Increase space between the columns and rows */
+}
+
+#quant-we-offer .col-md-6 {
+  padding: 1.8rem;
+  max-width: 500px;
+  /* Adjust the value as needed */
+  flex: 1 1 500px;
+  border-radius: 24px;
+  border: 0.1rem solid var(--mid-color);
+  background-color: var(--background-color);
+  transition: box-shadow 0.5s ease,
+    opacity var(--transition-duration) ease-in-out;
+  cursor: default;
+}
+
+#quant-we-offer .col-md-6:hover {
+  box-shadow: 0 0 2rem #f1c046;
+}
+
+#quant-we-offer h2 {
+  margin: 3rem 0;
+  font-size: 3rem;
+  font-style: italic;
+  color: var(--background-color);
+}
+
+#quant-we-offer h3 {
+  font-size: 1.8rem;
+}
+
+#quant-we-offer p {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+
+#quant-we-offer .member-pic:hover {
+  box-shadow: 0 0 2rem #f1c046;
+}
+
+
 
 
 /************** TIMELINE! ****************/
@@ -649,6 +742,7 @@ nav.quant-navbar .custom-toggler .navbar-toggler-icon {
 }
 
 @media (max-width: 768px) {
+
   /* Timeline Event */
   .timeline-event {
     position: relative;
@@ -720,16 +814,52 @@ nav.quant-navbar .custom-toggler .navbar-toggler-icon {
   .navbar-nav .nav-item {
     margin-right: 0;
   }
-  .navbar-nav .nav-link {
-    padding: 0.5em 0;
-  }
 
   .content-center h1 {
     font-size: 3rem;
   }
+
   .content-center h2 {
     font-size: 1.5rem;
   }
+
+
+  .navbar-nav .nav-item {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    position: relative;
+    text-decoration: none;
+    padding: 0.5em 0;
+  }
+
+  .navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    /* Start at the center */
+    width: 0;
+    /* Start with no width */
+    height: 0.09em;
+    /* Thickness of the underline */
+    background-color: var(--text-color);
+    transform: translateX(-50%);
+    /* Center it */
+    transition: width 300ms ease;
+  }
+
+  .navbar-nav .nav-link:hover::after,
+  .navbar-nav .nav-link:focus::after {
+    width: 30%;
+    /* Expand halfway to the left and right */
+    transform: translateX(-50%);
+    /* Keep it centered */
+  }
+
+
 }
 
 @media (max-width: 1113px) {
