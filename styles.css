@@ -863,3 +863,20 @@ nav.quant-navbar .custom-toggler .navbar-toggler-icon {
     padding: 0 !important;
   }
 }
+
+/* ~~~~~ EGG ~~~~~ */
+#eggImage {
+  position: absolute;
+  left: -100px;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+  width: 30px;
+  opacity: 0;
+  cursor: default;
+  transition: opacity 4s ease;
+}
+
+#eggImage:hover {
+  opacity: 1;
+}
