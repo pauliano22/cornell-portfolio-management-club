@@ -131,26 +131,11 @@
         This organization is a registered student organization of Cornell
         University
       </p>
-      <a href="egg.html">
+      
+      <a onclick="javascript: window.location = 'https://www.cornellportfoliomanagement.com/egg.html';">
         <img src="images/egg.png" alt="Egg Image" 
-            style="position: absolute; left: -100px; top: 50%; transform: translateY(-50%); visibility: hidden; width: 20px;" 
             id="eggImage">
     </a>
-
-    <script>
-        let imageShown = false;  // Flag to check if the image has been shown
-
-        document.addEventListener('mousemove', (event) => {
-            const image = document.getElementById('eggImage');
-            const mouseX = event.clientX;
-
-            if (!imageShown && mouseX <= 100) {  // If image hasn't been shown yet
-                image.style.left = '0px'; // Show image at the left edge
-                image.style.visibility = 'visible'; // Make image visible
-                imageShown = true; // Set flag to true to keep it visible permanently
-            }
-        });
-    </script>
 
       <!-- Social Media Links -->
       <div class="social-icons">

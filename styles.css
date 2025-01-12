@@ -219,7 +219,6 @@ h1 {
 }
 
 @keyframes bounce {
-
   0%,
   20%,
   50%,
@@ -470,7 +469,7 @@ h1 {
   object-fit: cover;
   object-position: top;
   overflow: hidden;
-  transition: 0.4s ease-in ;
+  transition: 0.4s ease-in;
 }
 
 .member-pic:hover {
@@ -546,7 +545,6 @@ footer {
   padding: 0 30%;
 }
 
-
 #popup .quant-popup .close-btn {
   color: var(--background-color);
   top: 70px;
@@ -585,10 +583,10 @@ nav.quant-navbar .custom-toggler .navbar-toggler-icon {
 }
 
 .icon-container {
-  display: flex;          /* Use Flexbox for layout */
+  display: flex; /* Use Flexbox for layout */
   justify-content: space-evenly; /* Evenly space the icons */
-  align-items: center;    /* Vertically center the icons */
-  gap: 1rem;              /* Optional: Add space between icons */
+  align-items: center; /* Vertically center the icons */
+  gap: 1rem; /* Optional: Add space between icons */
 }
 
 /* QUANT WE OFFER SECTION */
@@ -640,13 +638,9 @@ nav.quant-navbar .custom-toggler .navbar-toggler-icon {
   line-height: 1.8;
 }
 
-
 #quant-we-offer .member-pic:hover {
   box-shadow: 0 0 2rem #f1c046;
 }
-
-
-
 
 /************** TIMELINE! ****************/
 .timeline-section {
@@ -742,7 +736,6 @@ nav.quant-navbar .custom-toggler .navbar-toggler-icon {
 }
 
 @media (max-width: 768px) {
-
   /* Timeline Event */
   .timeline-event {
     position: relative;
@@ -823,7 +816,6 @@ nav.quant-navbar .custom-toggler .navbar-toggler-icon {
     font-size: 1.5rem;
   }
 
-
   .navbar-nav .nav-item {
     margin-right: 0;
     text-align: center;
@@ -858,8 +850,6 @@ nav.quant-navbar .custom-toggler .navbar-toggler-icon {
     transform: translateX(-50%);
     /* Keep it centered */
   }
-
-
 }
 
 @media (max-width: 1113px) {
@@ -872,4 +862,21 @@ nav.quant-navbar .custom-toggler .navbar-toggler-icon {
     margin: 0;
     padding: 0 !important;
   }
+}
+
+/* ~~~~~ EGG ~~~~~ */
+#eggImage {
+  position: absolute;
+  left: -100px;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+  width: 30px;
+  opacity: 0;
+  cursor: default;
+  transition: opacity 4s ease;
+}
+
+#eggImage:hover {
+  opacity: 1;
 }
