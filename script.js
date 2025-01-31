@@ -1,64 +1,54 @@
 // Data for each member, including image URLs
 const memberInfo = {
-    member1: {
-        name: "Member 1",
-        info: "Member 1 is responsible for overseeing the financial aspects of the club.",
-        image: "images/filler.png" // Replace with actual image URL
+    alex: {
+        name: "Alex Smith",
+        info: "Alex is President, overseeing the club’s operations, setting strategic goals, and ensuring all members fulfill their responsibilities.",
+        image: "images/people/alex-smith.jpeg" 
     },
-    member2: {
-        name: "Member 2",
-        info: "Member 2 focuses on outreach and building relationships with industry partners.",
-        image: "images/filler.png" // Replace with actual image URL
+    haiar: {
+        name: "Haiar Isliamov",
+        info: "Haiar is Vice President, ensuring all tasks are understood and completed, and facilitates communication among leadership.",
+        image: "images/people/haiar-isliamov.jpeg" 
     },
-    member3: {
-        name: "Member 3",
-        info: "Member 3 manages club events and ensures smooth operations.",
-        image: "images/filler.png" // Replace with actual image URL
+    dennis: {
+        name: "Dennis Voloshko",
+        info: "Dennis is Treasurer, handling the club’s finances and reaching out for funding opportunities.",
+        image: "images/people/dennis-voloshko.jpeg"
     },
-    member4: {
-        name: "Member 4",
-        info: "Member 4 is in charge of marketing and promoting the club's initiatives.",
-        image: "images/filler.png" // Replace with actual image URL
+    thomas: {
+        name: "Thomas Vogeley",
+        info: "Thomas is VP of DEI, organizing initiatives to promote diversity in the club’s recruitment and ensuring an inclusive environment.",
+        image: "images/people/thomas-vogeley.jpeg" 
     },
-    member5: {
-        name: "Member 5",
-        info: "Member 5 assists with research and analysis of market trends.",
-        image: "images/filler.png" // Replace with actual image URL
+    julio: {
+        name: "Julio Kutrolli",
+        info: "Julio is the VP of Outreach, maintaining relationships with Career Services to bring in alumni guest speakers and manages external club communications, including email.",
+        image: "images/people/julio-kutrolli.jpeg" 
     },
-    member6: {
-        name: "Member 6",
-        info: "Member 6 coordinates workshops and educational sessions for members.",
-        image: "images/filler.png" // Replace with actual image URL
-    },
-    member7: {
-        name: "Member 7",
-        info: "Member 7 handles club finances and budgeting.",
-        image: "images/filler.png" // Replace with actual image URL
-    },
-    member8: {
-        name: "Member 8",
-        info: "Member 8 is responsible for social media and online presence.",
-        image: "images/filler.png" // Replace with actual image URL
-    },
-    member9: {
-        name: "Member 9",
-        info: "Member 9 supports new members with onboarding and resources.",
-        image: "images/filler.png" // Replace with actual image URL
+    daniel: {
+        name: "Daniel Bitensky",
+        info: "Daniel is the VP of Events, organizing speaker events, networking sessions, and club activities to enhance member engagement and learning.",
+        image: "images/people/daniel-bitensky.jpeg" 
     },
     paul: {
         name: "Paul Iacobucci",
-        info: "Paul is the Co-Founder, VP of Technology and the Head of Quantitative Finance for this club! He made version 1 of the website, and you do not want to see that!",
-        image: "images/people/paul.jpg" // Replace with actual image URL
+        info: "Paul is the VP of Technology and the Head of Quantitative Finance.",
+        image: "images/people/paul-iacobucci.jpg"
     },
     akhil: {
         name: "Akhil Kagithapu",
-        info: "Akhil is just chill guy. His website domain is lowkey impossible to remember tho.",
-        image: "images/people/akhil.jpg" // Replace with actual image URL
+        info: "Akhil is a Lead of Quantitative Finance, currently designing the portfolio management algorithm for FA25 NME.",
+        image: "images/people/akhil-kagithapu.jpg" 
     },
     gabriel: {
         name: "Gabriel Castillo",
-        info: "...",
-        image: "images/people/gabriel.jpg" // Replace with actual image URL
+        info: "Gabriel is a Lead of Quantitative Finance and Co-Developer of the site.",
+        image: "images/people/gabriel-castillo.jpg" 
+    },
+    james: {
+        name: "James Lynch",
+        info: "James is VP of Investments, managing the portfolio and making investments based off club voting.",
+        image: "images/people/james-lynch.jpg" 
     }
 };
 
@@ -98,3 +88,10 @@ document.addEventListener('click', function(event) {
         hidePopup();
     }
 });
+
+//sample member
+// member9: {
+//     name: "Member 9",
+//     info: "Member 9 supports new members with onboarding and resources.",
+//     image: "images/filler.png"
+// }
